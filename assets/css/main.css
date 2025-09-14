@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set default theme */
+:root {
+  color-scheme: light;
+}
+
+/* Automatically use dark theme when user prefers dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}

@@ -6,16 +6,28 @@ on:
       - main
 
 jobs:
-  build:
-
+  lint:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v5
+
       - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - run: pnpm install
-      - run: pnpm lint
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prepare Nuxt
+        run: pnpm run postinstall
+
+      - name: Run ESLint
+        run: pnpm run lint
