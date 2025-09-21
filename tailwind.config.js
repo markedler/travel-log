@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -13,13 +13,13 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark"], // Only include the themes you want
-    darkTheme: "dark", // Theme to use when prefers-color-scheme is dark
+    themes: ["light", "dark"],
+    darkTheme: "dark",
     base: true,
     styled: true,
     utils: true,
     rtl: false,
     prefix: "",
-    logs: true,
+    logs: false,
   },
 };
