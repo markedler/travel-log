@@ -11,7 +11,7 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
-  ignores: ["**/migrations/*", ".pnpm-store/**"],
+  ignores: ["package.json", "**/migrations/*", ".pnpm-store/**"],
 }, {
   rules: {
     "no-console": ["warn"],
