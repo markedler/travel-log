@@ -14,6 +14,7 @@ export default withNuxt(antfu({
   ignores: ["package.json", "**/migrations/*", ".pnpm-store/**"],
 }, {
   rules: {
+    "ts/no-redeclare": ["off"],
     "no-console": ["warn"],
     "antfu/no-top-level-await": ["off"],
     "node/prefer-global/process": ["off"],
