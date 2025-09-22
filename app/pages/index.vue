@@ -1,5 +1,5 @@
 <template>
-  <div class="hero bg-base-200 bg-base-300 min-h-96 container mx-auto mt-4">
+  <div class="hero bg-base-300 min-h-96 container mx-auto mt-4">
     <div class="hero-content text-center">
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">
